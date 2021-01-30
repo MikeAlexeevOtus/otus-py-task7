@@ -16,6 +16,7 @@ dev-apprun:
 	$(PYTHON) $(MANAGE_EXE) runserver
 
 dev-pgstart:
+	mkdir -p ~/hasker_data/pgsql
 	docker run -d -p 5432:5432 \
 		-e POSTGRES_HOST_AUTH_METHOD=trust \
 		-e POSTGRES_USER=hasker \
